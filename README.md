@@ -4,7 +4,7 @@
 
 B.Tech Bioinformatics minor project, Department of Biotechnology, IILM University, Greater Noida (2025-26)
 
-**Team:** Khushi Sharma, Jaspreet Kaur Sukheeja, Dakshta Pal, Mitali Mishra, Priyanshu Pachauri
+**Team:** B.Tech Bioinformatics project team
 **Supervisor:** Dr. Pankaj Verma, Assistant Professor, Department of Biotechnology, IILM University
 
 ## Overview
@@ -45,37 +45,17 @@ Gene identification (TCGA, GEO, GeneCards)
 
 ## Results
 
-### Gene expression and common genes
+### Common genes
 
 Starting from a 120-gene list, a Venn analysis found **18 genes common to all three cancers**.
 
-| Heatmap of common DEGs | Volcano plot (GSE15852) |
-|---|---|
-| ![Heatmap](heatmap_common_deg.png) | ![Volcano plot](volcano_plot_gse15852.png) |
+![Venn diagram of common genes](venn_common_genes.png)
 
-![Venn diagram](venn_common_genes.png)
+### Hub genes and pathway enrichment
 
-### Hub genes and PPI network
+Network analysis (STRING + Cytoscape, degree centrality) placed **TP53, PIK3CA, AKT1, EGFR and PTEN** among the central regulators. KEGG and GO enrichment pointed to the **PI3K/AKT signaling pathway** as the shared pathway, linked to cell proliferation, survival, apoptosis and signal transduction.
 
-Network analysis (STRING + Cytoscape, degree centrality) placed **TP53, PIK3CA, AKT1, EGFR and PTEN** among the central regulators. EGFR, PTEN, PIK3CA and AKT1 form the core interacting hub subset.
-
-| Cytoscape network | STRING network of hub genes |
-|---|---|
-| ![Cytoscape](cytoscape_hub_network.png) | ![STRING hubs](string_network_hub_genes.png) |
-
-### Pathway enrichment
-
-KEGG and GO enrichment pointed to the **PI3K/AKT signaling pathway** as the shared pathway (cell proliferation, survival, apoptosis, signal transduction).
-
-![KEGG pathway](kegg_pathways_in_cancer.png)
-
-![PI3K/AKT summary](pi3k_akt_pathway_summary.png)
-
-### Drug-likeness (SwissADME)
-
-Amentoflavone, Garcinone D, Ginkgetin and Withanolide D were assessed for Lipinski's rule, lipophilicity, solubility and ADME properties.
-
-![SwissADME heatmap](pharmacokinetic_heatmap_swissadme.png)
+![GO enrichment](go_enrichment_A.png)
 
 ### Molecular docking (AutoDock Vina)
 
@@ -92,14 +72,6 @@ Amentoflavone, Garcinone D, Ginkgetin and Withanolide D were assessed for Lipins
 | Withanolide D - AKT1 | Binding site interactions |
 |---|---|
 | ![Withanolide D AKT1](docking_withanolide_d_akt1_surface.png) | ![Interactions](docking_interactions_withanolide_d_akt1.png) |
-
-**Control drug vs phytochemical docking poses**
-
-| Control drug | Phytochemical |
-|---|---|
-| ![Gefitinib EGFR](docking_gefitinib_egfr.png) | ![Amentoflavone EGFR](docking_amentoflavone_egfr.png) |
-| ![Alpelisib PI3K](docking_alpelisib_pi3k.png) | ![Garcinone D PI3K](docking_garcinone_d_pi3k.png) |
-| ![Capivasertib AKT1](docking_capivasertib_akt1.png) | ![Ginkgetin AKT1](docking_ginkgetin_akt1.png) |
 
 AutoDock Vina run output (exhaustiveness 64, best mode -12.9 kcal/mol):
 
