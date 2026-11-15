@@ -67,7 +67,7 @@ Network analysis (STRING + Cytoscape, degree centrality) placed **TP53, PIK3CA, 
 
 **Strongest binding:** Withanolide D with AKT1 at -12.9 kcal/mol, compared with -10.6 kcal/mol for the control drug Capivasertib.
 
-![Docking results table](docking_results_table.png)
+![Docking results table]
 
 | Withanolide D - AKT1 | Binding site interactions |
 |---|---|
